@@ -4,13 +4,13 @@
 
 Firmware_Diy_Core() {
 
-	Author=AUTO
-	Author_URL=AUTO
+	Author=false
+	Author_URL=false
 	Default_Flag=AUTO
 	Default_IP="192.168.1.1"
 	Default_Title="Powered by AutoBuild-Actions"
 
-	Short_Fw_Date=true
+	Short_Fw_Date=false
 	x86_Full_Images=false
 	Fw_Format=false
 	Regex_Skip="packages|buildinfo|sha256sums|manifest|kernel|rootfs|factory|itb|profile|ext4|json"
@@ -91,6 +91,7 @@ EOF
 			AddPackage git lean autocore-modify Hyy2001X master
 			sed -i -- 's:/bin/ash:'/bin/bash':g' ${BASE_FILES}/etc/passwd
 			# sed -i "s?6.0?5.19?g" ${WORK}/target/linux/x86/Makefile
+                        sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' ${BASE_FILES}/etc/sysctl.conf
 		;;
 		esac
 	;;
