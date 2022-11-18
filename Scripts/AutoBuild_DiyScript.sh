@@ -65,7 +65,7 @@ EOF
 		rm -r ${FEEDS_LUCI}/luci-theme-argon*
 		AddPackage git themes luci-theme-argon jerrykuku 18.06
 		AddPackage svn apps minieap immortalwrt/packages/branches/openwrt-18.06/net
-		AddPackage svn other luci-app-openclash vernesong/OpenClash/branches/dev
+		#AddPackage svn other luci-app-openclash vernesong/OpenClash/branches/dev
 		AddPackage git lean luci-app-argon-config jerrykuku master
 		AddPackage git other luci-app-ikoolproxy iwrt main
 		AddPackage git other helloworld fw876 master
@@ -92,8 +92,8 @@ EOF
 			sed -i -- 's:/bin/ash:'/bin/bash':g' ${BASE_FILES}/etc/passwd
 			# sed -i "s?6.0?5.19?g" ${WORK}/target/linux/x86/Makefile
                         sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' ${BASE_FILES}/etc/sysctl.conf
-                        AddPackage svn other luci-app-openclash vernesong/OpenClash/dev
-                        AddPackage git other luci-app-bypass kiddin9 main
+                        AddPackage svn other openclash vernesong/OpenClash/dev
+                        AddPackage git other openwrt-bypass kiddin9 main
 		;;
 		esac
 	;;
