@@ -14,15 +14,15 @@ CONFIG_VMDK_IMAGES=y
 CONFIG_GRUB_TITLE="x86_64 firmware by AutoBuild-Actions"
 CONFIG_GRUB_TIMEOUT="0"
 # CONFIG_TARGET_KERNEL_PARTSIZE=32
-CONFIG_TARGET_ROOTFS_PARTSIZE=960
-CONFIG_GRUB_CONSOLE=n
+CONFIG_TARGET_ROOTFS_PARTSIZE=480
+CONFIG_GRUB_CONSOLE=y
 CONFIG_TARGET_IMAGES_GZIP=y
 CONFIG_COREMARK_ENABLE_MULTITHREADING=y
 CONFIG_COREMARK_NUMBER_OF_THREADS=16
-CONFIG_COREMARK_OPTIMIZE_O3=y
+# CONFIG_COREMARK_OPTIMIZE_O3=y
 CONFIG_LUCI_CSSTIDY=y
-CONFIG_ZLIB_OPTIMIZE_SPEED=y
-CONFIG_ZSTD_OPTIMIZE_O3=y
+# CONFIG_ZLIB_OPTIMIZE_SPEED=y
+# CONFIG_ZSTD_OPTIMIZE_O3=y
 CONFIG_LUCI_LANG_zh_Hans=y
 
 # CONFIG_SIGNATURE_CHECK is not set
@@ -75,7 +75,7 @@ CONFIG_PACKAGE_luci-app-adguardhome_INCLUDE_binary=n
 # CONFIG_PACKAGE_luci-app-autotimeset=y
 # CONFIG_PACKAGE_luci-app-autoupdate=y
 CONFIG_PACKAGE_luci-app-advanced=y
-CONFIG_PACKAGE_luci-app-advancedsetting=y
+#CONFIG_PACKAGE_luci-app-advancedsetting=y
 CONFIG_PACKAGE_luci-app-aria2=y
 CONFIG_PACKAGE_luci-app-arpbind=y
 #CONFIG_PACKAGE_luci-app-aliyundrive-webdav=y
@@ -92,14 +92,14 @@ CONFIG_PACKAGE_luci-app-diskman_INCLUDE_lsblk=y
 # CONFIG_PACKAGE_luci-app-diskman_INCLUDE_mdadm is not set
 # CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_linear is not set
 # CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_raid456 is not set
-CONFIG_PACKAGE_luci-app-dnsfilter=y
-# CONFIG_PACKAGE_luci-app-dockerman is not set
-CONFIG_PACKAGE_luci-app-docker=y
-CONFIG_DOCKER_CGROUP_OPTIONS=y
-CONFIG_DOCKER_NET_MACVLAN=y
-CONFIG_DOCKER_OPTIONAL_FEATURES=y
+# CONFIG_PACKAGE_luci-app-dnsfilter=y
+CONFIG_PACKAGE_luci-app-dockerman=y
+# CONFIG_PACKAGE_luci-app-docker=y
+#CONFIG_DOCKER_CGROUP_OPTIONS=y
+#CONFIG_DOCKER_NET_MACVLAN=y
+#CONFIG_DOCKER_OPTIONAL_FEATURES=y
 #CONFIG_PACKAGE_luci-app-familycloud=y
-CONFIG_PACKAGE_luci-app-filetransfer=y
+#CONFIG_PACKAGE_luci-app-filetransfer=y
 CONFIG_PACKAGE_luci-app-firewall=y
 CONFIG_PACKAGE_luci-app-gpsysupgrade=y
 CONFIG_PACKAGE_luci-app-hd-idle=y
@@ -117,7 +117,7 @@ CONFIG_PACKAGE_luci-app-nlbwmon=y
 CONFIG_PACKAGE_luci-app-natter=y
 # CONFIG_PACKAGE_luci-app-npc=y
 # CONFIG_PACKAGE_luci-app-nps=y
-#CONFIG_PACKAGE_luci-app-openclash=y
+CONFIG_PACKAGE_luci-app-openclash=y
 CONFIG_PACKAGE_luci-app-onliner=y
 #CONFIG_PACKAGE_luci-app-pptp-server=y
 #CONFIG_PACKAGE_luci-app-qbittorrent=y
@@ -140,33 +140,33 @@ CONFIG_PACKAGE_luci-app-syncdial=y
 CONFIG_PACKAGE_luci-app-smartdns=y
 # CONFIG_PACKAGE_luci-app-pushbot=y
 CONFIG_PACKAGE_luci-app-socat=y
-CONFIG_PACKAGE_luci-app-statistics=y
-CONFIG_PACKAGE_collectd-mod-cpu=y
-CONFIG_PACKAGE_collectd-mod-interface=y
-CONFIG_PACKAGE_collectd-mod-memory=y
-CONFIG_PACKAGE_collectd-mod-ping=y
-CONFIG_PACKAGE_collectd-mod-rrdtool=y
-CONFIG_PACKAGE_collectd-mod-wireless=y
-CONFIG_PACKAGE_collectd-mod-unixsock=y
-CONFIG_PACKAGE_collectd-mod-cpufreq=y
-CONFIG_PACKAGE_collectd-mod-sensors=y
-CONFIG_PACKAGE_collectd-mod-conntrack=y
-CONFIG_PACKAGE_collectd-mod-iwinfo=y
-CONFIG_PACKAGE_collectd-mod-load=y
-CONFIG_PACKAGE_collectd-mod-network=y
+#CONFIG_PACKAGE_luci-app-statistics=y
+#CONFIG_PACKAGE_collectd-mod-cpu=y
+#CONFIG_PACKAGE_collectd-mod-interface=y
+#CONFIG_PACKAGE_collectd-mod-memory=y
+#CONFIG_PACKAGE_collectd-mod-ping=y
+#CONFIG_PACKAGE_collectd-mod-rrdtool=y
+#CONFIG_PACKAGE_collectd-mod-wireless=y
+#CONFIG_PACKAGE_collectd-mod-unixsock=y
+#CONFIG_PACKAGE_collectd-mod-cpufreq=y
+#CONFIG_PACKAGE_collectd-mod-sensors=y
+#CONFIG_PACKAGE_collectd-mod-conntrack=y
+#CONFIG_PACKAGE_collectd-mod-iwinfo=y
+#CONFIG_PACKAGE_collectd-mod-load=y
+#CONFIG_PACKAGE_collectd-mod-network=y
 # CONFIG_PACKAGE_luci-app-turboacc=y
 # CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_OFFLOADING=y
 # CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_SHORTCUT_FE_DRV is not set
-# CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_SHORTCUT_FE=y
+CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_SHORTCUT_FE=y
 # CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_SHORTCUT_FE_CM is not set
 CONFIG_PACKAGE_luci-app-ttyd=y
-CONFIG_PACKAGE_luci-app-uhttpd=y
+#CONFIG_PACKAGE_luci-app-uhttpd=y
 #CONFIG_PACKAGE_luci-app-usb-printer=y
 # CONFIG_PACKAGE_luci-app-uugamebooster=y
-CONFIG_PACKAGE_luci-app-unblockmusic=y
-CONFIG_PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_Go=y
+#CONFIG_PACKAGE_luci-app-unblockmusic=y
+#CONFIG_PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_Go=y
 # CONFIG_PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_NodeJS is not set
-#CONFIG_PACKAGE_luci-app-unblockneteasemusic=y
+CONFIG_PACKAGE_luci-app-unblockneteasemusic=y
 CONFIG_PACKAGE_luci-app-upnp=y
 # CONFIG_PACKAGE_luci-app-v2ray-server is not set
 CONFIG_PACKAGE_luci-app-vlmcsd=n
@@ -213,7 +213,7 @@ CONFIG_PACKAGE_shadowsocks-libev-ss-server=y
 # CONFIG_PACKAGE_shadowsocks-rust-ssurl is not set
 
 # passwall
-# CONFIG_PACKAGE_luci-app-passwall=y
+CONFIG_PACKAGE_luci-app-passwall=y
 # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Brook is not set
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Hysteria=y
 # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_NaiveProxy is not set
@@ -244,10 +244,18 @@ CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Xray=y
 
 # Themes
 CONFIG_PACKAGE_luci-theme-argon=y
-# CONFIG_PACKAGE_luci-theme-argon-master=y
+# CONFIG_PACKAGE_luci-theme-argon-18.06=y
+# CONFIG_PACKAGE_luci-theme-argon-mod=y
 CONFIG_PACKAGE_luci-theme-bootstrap=y
-CONFIG_PACKAGE_luci-theme-edge=y
 CONFIG_PACKAGE_luci-theme-neobird=y
+# CONFIG_PACKAGE_luci-theme-edge=y
+# CONFIG_PACKAGE_luci-theme-Butterfly=y
+# CONFIG_PACKAGE_luci-theme-Butterfly-dark=y
+# CONFIG_PACKAGE_luci-theme-btmod=y
+# CONFIG_PACKAGE_luci-theme-ifit=y
+# CONFIG_PACKAGE_luci-theme-netgear=y
+# CONFIG_PACKAGE_luci-theme-opentomato=y
+# CONFIG_PACKAGE_luci-theme-opentomcat=y
 
 # Openclash依赖来包
 CONFIG_PACKAGE_luci=y
@@ -278,18 +286,18 @@ CONFIG_PACKAGE_kmod-inet-diag=y
 CONFIG_PACKAGE_unzip=y
 CONFIG_PACKAGE_kmod-nft-tproxy=y
 # CONFIG_PACKAGE_luci-compat=y
-# CONFIG_PACKAGE_shadowsocks-rust-sslocal=y
-# CONFIG_PACKAGE_shadowsocks-rust-ssserver=y
-# CONFIG_PACKAGE_shadowsocks-libev-ss-local=y
-# CONFIG_PACKAGE_shadowsocks-libev-ss-redir=y
-# CONFIG_PACKAGE_shadowsocksr-libev-ssr-check=y
-# CONFIG_PACKAGE_shadowsocksr-libev-ssr-local=y
-# CONFIG_PACKAGE_shadowsocksr-libev-ssr-redir=y
-# CONFIG_PACKAGE_shadowsocksr-libev-ssr-server=y
-# CONFIG_PACKAGE_simple-obfs-client=y
-# CONFIG_PACKAGE_trojan=y
-# CONFIG_PACKAGE_trojan-go=y
-# CONFIG_PACKAGE_trojan-plus=y
+CONFIG_PACKAGE_shadowsocks-rust-sslocal=y
+CONFIG_PACKAGE_shadowsocks-rust-ssserver=y
+CONFIG_PACKAGE_shadowsocks-libev-ss-local=y
+CONFIG_PACKAGE_shadowsocks-libev-ss-redir=y
+CONFIG_PACKAGE_shadowsocksr-libev-ssr-check=y
+CONFIG_PACKAGE_shadowsocksr-libev-ssr-local=y
+CONFIG_PACKAGE_shadowsocksr-libev-ssr-redir=y
+CONFIG_PACKAGE_shadowsocksr-libev-ssr-server=y
+CONFIG_PACKAGE_simple-obfs-client=y
+CONFIG_PACKAGE_trojan=y
+CONFIG_PACKAGE_trojan-go=y
+CONFIG_PACKAGE_trojan-plus=y
 # CONFIG_PACKAGE_v2ray-core=y
 # CONFIG_PACKAGE_v2ray-geoip=y
 # CONFIG_PACKAGE_v2ray-geosite=y
@@ -298,6 +306,17 @@ CONFIG_PACKAGE_kmod-nft-tproxy=y
 # CONFIG_PACKAGE_xray-geodata=y
 # CONFIG_PACKAGE_xray-core=y
 # CONFIG_PACKAGE_xray-plugin=y
+
+# ikoolproxy依赖来包
+# CONFIG_PACKAGE_iptables-mod-nat-extra=y
+# CONFIG_PACKAGE_kmod-ipt-extra=y
+# CONFIG_PACKAGE_diffutils=y
+# CONFIG_PACKAGE_openssl-util=y
+# CONFIG_PACKAGE_dnsmasq-full=y
+# CONFIG_PACKAGE_ca-bundle=y
+# CONFIG_PACKAGE_ca-certificates=y
+# CONFIG_PACKAGE_libustream-openssl=y
+# CONFIG_PACKAGE_lua-openssl=y
 
 CONFIG_PACKAGE_luci-app-opkg=y
 CONFIG_PACKAGE_luci-compat=y
@@ -316,14 +335,14 @@ CONFIG_PACKAGE_kmod-lib-lz4=y
 CONFIG_PACKAGE_kmod-lib-zstd=y
 CONFIG_PACKAGE_htop=y
 
-#CONFIG_PACKAGE_nftables-json=y
-#CONFIG_PACKAGE_firewall4=y
-#CONFIG_PACKAGE_miniupnpd-nftables=y
-#CONFIG_PACKAGE_ip6tables-nft=y
-#CONFIG_PACKAGE_iptables-nft=y
-#CONFIG_PACKAGE_kmod-nft-core=y
-#CONFIG_PACKAGE_luci-app-nft-qos=y
-#CONFIG_PACKAGE_nft-qos=y
+# CONFIG_PACKAGE_nftables-json=y
+# CONFIG_PACKAGE_firewall4=y
+# CONFIG_PACKAGE_miniupnpd-nftables=y
+# CONFIG_PACKAGE_ip6tables-nft=y
+# CONFIG_PACKAGE_iptables-nft=y
+# CONFIG_PACKAGE_kmod-nft-core=y
+# CONFIG_PACKAGE_luci-app-nft-qos=y
+# CONFIG_PACKAGE_nft-qos=y
 CONFIG_PACKAGE_kmod-shortcut-fe=y
 
 # 其他 Appliciations
@@ -367,7 +386,8 @@ CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
 # CONFIG_PACKAGE_smartmontools=y
 # CONFIG_PACKAGE_usbutils=y
 # CONFIG_PACKAGE_usb-modeswitch=y
-CONFIG_PACKAGE_upx=y
+# CONFIG_PACKAGE_upx-static=y
+# CONFIG_PACKAGE_ucl is not set
 # CONFIG_PACKAGE_wpad-openssl=y
 # CONFIG_PACKAGE_wget-ssl=y
 # CONFIG_PACKAGE_xfs-fsck=y
