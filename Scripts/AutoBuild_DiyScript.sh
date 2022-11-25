@@ -74,6 +74,11 @@ EOF
 		AddPackage git themes luci-theme-neobird thinktip main
 		AddPackage git other luci-app-smartdns pymumu lede
                 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' ${BASE_FILES}/etc/sysctl.conf
+                AddPackage git passwall-luci openwrt-passwall xiaorouji luci
+                AddPackage git passwall-depends openwrt-passwall xiaorouji packages
+                AddPackage git other openwrt-passwall2 xiaorouji main
+                AddPackage git other openwrt-mo QiuSimons master
+                #AddPackage git other netspeedtest sirpdboy master
 
 		case "${TARGET_BOARD}" in
 		ramips)
