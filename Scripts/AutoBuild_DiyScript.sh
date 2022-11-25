@@ -77,7 +77,7 @@ EOF
                 AddPackage git passwall-luci openwrt-passwall xiaorouji luci
                 AddPackage git passwall-depends openwrt-passwall xiaorouji packages
                 AddPackage git other openwrt-passwall2 xiaorouji main
-                AddPackage git other openwrt-mo QiuSimons master
+                #AddPackage git other openwrt-mo QiuSimons master
                 #AddPackage git other netspeedtest sirpdboy master
 
 		case "${TARGET_BOARD}" in
