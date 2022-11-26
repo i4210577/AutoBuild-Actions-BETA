@@ -37,7 +37,8 @@ env:
 # 编译时调用的 [.config] 文件名称
   CONFIG_FILE: p2w_r619ac-128m
 # 源码仓库:分支
-  DEFAULT_SOURCE: coolsnowwolf/lede:master
+  #DEFAULT_SOURCE: coolsnowwolf/lede:master
+  DEFAULT_SOURCE: 1715173329/imoutowrt:master-ax3000-5.15
 # 上传固件到 Github Releases
   UPLOAD_RELEASES: true
 # 上传固件到 Github Artifacts
@@ -49,7 +50,7 @@ env:
 # 删除早期的 workflow 任务
   DELETE_OLD_WORKFLOW: true
 # Cache 加速编译
-  CACHE_ACCELERATE: true
+  CACHE_ACCELERATE: false
 ### 结束
 
 jobs:
