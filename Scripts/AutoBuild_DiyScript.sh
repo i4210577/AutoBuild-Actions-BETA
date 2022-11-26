@@ -79,6 +79,7 @@ EOF
                 AddPackage git other openwrt-passwall2 xiaorouji main
                 #AddPackage git other openwrt-mo QiuSimons master
                 #AddPackage git other netspeedtest sirpdboy master
+                AddPackage git other luci-app-unblockneteasemusic unblockneteasemusic master
 
 		case "${TARGET_BOARD}" in
 		ramips)
