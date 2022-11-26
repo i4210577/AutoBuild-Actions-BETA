@@ -37,7 +37,8 @@ env:
 # 编译时调用的 [.config] 文件名称
   CONFIG_FILE: p2w_r619ac-128m
 # 源码仓库:分支
-  DEFAULT_SOURCE: coolsnowwolf/lede:master
+  #DEFAULT_SOURCE: coolsnowwolf/lede:master
+  DEFAULT_SOURCE: 1715173329/imoutowrt:master-ax3000-5.15
 # 上传固件到 Github Releases
   UPLOAD_RELEASES: true
 # 上传固件到 Github Artifacts
@@ -169,8 +170,8 @@ jobs:
         Firmware_Diy_Other
         ./scripts/feeds install -a > /dev/null 2>&1
         make defconfig
-        make download -j$(nproc) V=s
-        make -j$(nproc) || make -j1 V=s
+        make download -j8 V=s
+        make -j4 || make -j1 V=s
         [ "$?" == 0 ] && echo "Result=true" >> $GITHUB_ENV || echo "Result=false" >> $GITHUB_ENV
 
     - name: 结束固件
