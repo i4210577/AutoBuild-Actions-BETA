@@ -109,16 +109,16 @@ EOF
 	;;
         1715173329/imoutowrt:master-ax3000-5.15)
                 sed -i "s?/bin/login?/usr/libexec/login.sh?g" ${FEEDS_PKG}/ttyd/files/ttyd.config
-                AddPackage git other openclash vernesong master
-                AddPackage git lean luci-app-argon-config jerrykuku master
-                AddPackage git other luci-app-ikoolproxy iwrt main
-                AddPackage git other helloworld fw876 master
-                AddPackage git themes luci-theme-neobird thinktip main
-                AddPackage git other luci-app-smartdns pymumu lede
+                #AddPackage git other openclash vernesong master
+                #AddPackage git lean luci-app-argon-config jerrykuku master
+                #AddPackage git other luci-app-ikoolproxy iwrt main
+                #AddPackage git other helloworld fw876 master
+                #AddPackage git themes luci-theme-neobird thinktip main
+                #AddPackage git other luci-app-smartdns pymumu lede
                 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' ${BASE_FILES}/etc/sysctl.conf
-                AddPackage git passwall-luci openwrt-passwall xiaorouji luci
-                AddPackage git passwall-depends openwrt-passwall xiaorouji packages
-                AddPackage git other openwrt-passwall2 xiaorouji main
+                #AddPackage git passwall-luci openwrt-passwall xiaorouji luci
+                #AddPackage git passwall-depends openwrt-passwall xiaorouji packages
+                #AddPackage git other openwrt-passwall2 xiaorouji main
                 #AddPackage git other openwrt-mo QiuSimons master
                 #AddPackage git other netspeedtest sirpdboy master
                 #AddPackage git other luci-app-unblockneteasemusic unblockneteasemusic master
