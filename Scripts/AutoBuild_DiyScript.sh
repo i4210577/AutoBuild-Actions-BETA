@@ -106,6 +106,11 @@ EOF
 	;;
 	immortalwrt/immortalwrt*)
 		sed -i "s?/bin/login?/usr/libexec/login.sh?g" ${FEEDS_PKG}/ttyd/files/ttyd.config
+                sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' ${BASE_FILES}/etc/sysctl.conf
+        ;;
+        1715173329/imoutowrt*)
+                sed -i "s?/bin/login?/usr/libexec/login.sh?g" ${FEEDS_PKG}/ttyd/files/ttyd.config
+                sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' ${BASE_FILES}/etc/sysctl.conf
         ;;
 	esac
 }
