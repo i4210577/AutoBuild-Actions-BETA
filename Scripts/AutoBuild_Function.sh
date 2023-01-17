@@ -34,6 +34,13 @@ Firmware_Diy_Before() {
 	*)
 		OP_VERSION="${OP_VERSION_HEAD}${Compile_Date}"
 	;;
+	1715173329/imoutowrt)
+		Version_File=package/base-files/files/etc/openwrt_release
+		OP_VERSION="${OP_VERSION_HEAD}${Compile_Date}"
+	;;
+	*)
+		OP_VERSION="${OP_VERSION_HEAD}${Compile_Date}"
+	;;
 	esac
 	while [[ -z ${x86_Test} ]];do
 		x86_Test="$(egrep -o "CONFIG_TARGET.*DEVICE.*=y" ${CONFIG_TEMP} | sed -r 's/CONFIG_TARGET_(.*)_DEVICE_(.*)=y/\1/')"
@@ -168,6 +175,15 @@ EOF
 				sed -i "s?ImmortalWrt?ImmortalWrt @ ${Author} [${Display_Date}]?g" ${Version_File}
 			fi
 		;;
+		1715173329/imoutowrt)
+			Copy ${CustomFiles}/Depends/openwrt_release_${OP_AUTHOR} ${BASE_FILES}/etc openwrt_release
+			if [[ -n ${TARGET_FLAG} ]]
+			then
+				sed -i "s?1715173329?imoutowrt ${TARGET_FLAG} @ ${Author} [${Display_Date}]?g" ${Version_File}
+			else
+				sed -i "s?1715173329?imoutowrt @ ${Author} [${Display_Date}]?g" ${Version_File}
+			fi
+		;;
 		esac
 		sed -i "s?By?By ${Author}?g" ${CustomFiles}/Depends/banner
 		sed -i "s?Openwrt?Openwrt ${OP_VERSION} / AutoUpdate ${AutoUpdate_Version}?g" ${CustomFiles}/Depends/banner
@@ -182,6 +198,12 @@ EOF
 		fi
 		case "${OP_AUTHOR}/${OP_REPO}" in
 		immortalwrt/immortalwrt)
+			Copy ${CustomFiles}/Depends/banner $(PKG_Finder d package default-settings)/files openwrt_banner
+		;;
+		*)
+			Copy ${CustomFiles}/Depends/banner ${BASE_FILES}/etc
+		;;
+		1715173329/imoutowrt)
 			Copy ${CustomFiles}/Depends/banner $(PKG_Finder d package default-settings)/files openwrt_banner
 		;;
 		*)
