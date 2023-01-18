@@ -22,10 +22,10 @@ on:
     inputs:
       Tempoary_CONFIG:
         description: '配置文件'
-        default: 'rockchip_armv8'
+        default: 'rockchip-armv8'
         type: choice
         options:
-          - 'rockchip_armv8'
+          - 'rockchip-armv8'
           #- 'rockchip_armv8-docker'
       Tempoary_FLAG:
         description: '固件标签'
@@ -54,7 +54,7 @@ on:
 ### 环境变量设置
 env:
 # 编译时调用的 [.config] 文件名称
-  CONFIG_FILE: rockchip_armv8
+  CONFIG_FILE: rockchip-armv8
 # 源码仓库:分支
   DEFAULT_SOURCE: 1715173329/imoutowrt:master-rockchip-6.1
 # 删除无用文件以增加编译空间
